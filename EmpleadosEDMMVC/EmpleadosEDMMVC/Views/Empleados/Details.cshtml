@@ -33,8 +33,33 @@
         <dd>
             @Html.DisplayFor(model => model.Edad)
         </dd>
-
     </dl>
+    <table class="table">
+        <tr>
+            <th>Categoria</th>
+            <th>Subcategoria </th>
+            <th>Años de Experiencia </th>
+            <th>Salario</th>
+        </tr>
+
+        @foreach (var item in Model.Empleado_Detalles)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(ModelItem => item.Categoria)
+                </td>
+                <td>
+                    @Html.DisplayFor(ModelItem => item.Subcategoria)
+                </td>
+                <td>
+                    @Html.DisplayFor(ModelItem => item.Experiencia_Anios)
+                </td>
+                <td>
+                    @Html.DisplayFor(ModelItem => item.Salario)
+                </td>
+            </tr>
+        }
+    </table>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |

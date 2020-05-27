@@ -15,6 +15,9 @@
             @Html.DisplayNameFor(model => model.Categoria)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Subcategoria)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.ANTIGUEDAD_Pluses)
         </th>
         <th>
@@ -30,28 +33,31 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Categoria)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ANTIGUEDAD_Pluses)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Experiencia_Anios)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Salario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Empleados.Nombre)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Detalles_ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Detalles_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Detalles_ID })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Categoria)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Subcategoria)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ANTIGUEDAD_Pluses)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Experiencia_Anios)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Salario)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Empleados.Nombre)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.Detalles_ID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.Detalles_ID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.Detalles_ID })
+    </td>
+</tr>
 }
 
 </table>

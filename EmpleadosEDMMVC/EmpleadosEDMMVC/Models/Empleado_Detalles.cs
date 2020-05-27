@@ -20,6 +20,7 @@ namespace EmpleadosEDMMVC.Models
         public Nullable<int> ANTIGUEDAD_Pluses { get; set; }
         public Nullable<int> Experiencia_Anios { get; set; }
         public Nullable<int> Salario { get; set; }
+        public string Subcategoria { get; set; }
     
         public virtual Empleados Empleados { get; set; }
     }
